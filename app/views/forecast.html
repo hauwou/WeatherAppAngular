@@ -1,18 +1,14 @@
-Forecast for {{ city }}
+
+Days: <a ng-class="{'btn btn-success': days == '2',   'btn btn-info': days != '2'}" href="#/forecast/2">2 Days</a> | <a ng-class="{'btn btn-success': days == '5',   'btn btn-info': days != '5'}" href="#/forecast/5">5 Days</a> | <a ng-class="{'btn btn-success': days == '7',   'btn btn-info': days != '7'}" href="#/forecast/7">7 Days</a>
+<hr/>
+<h3> <div  class= "label label-info pull-left ">{{days}} Days</div> </h3> Forecast for {{ city }}
+<hr/>
 
 <div ng-repeat="w in weatherResult.list">
     <div class="row">
         <div class="col-md-12">
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{
-      convertDateFormat(w.dt)| date: 'MMM dd y'}}</h3>
-                </div>
-                <div class="panel-body">Daytime Temperature: {{convertToFahrenheit(w.temp.day)}}
-            </div>
-            </div>
-
+            <daily-report weather-day="w" convert-to-standard="convertToFahrenheit(temp)" convert-to-date="convertDateFormat(rawDate)" date-format = "MMM d, y"></daily-report>
         </div>
     </div>
 </div>

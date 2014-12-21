@@ -29,6 +29,7 @@ angular
       })
 
     .when('/forecast/:days', {
+        //.when('/forecast/:days/numdays/:numdays'
         templateUrl: 'views/forecast.html',
         controller: 'ForecastCtrl'
       })
