@@ -15,9 +15,13 @@ Dependency Injections
 
 Use/create services
 
-Use/create custom directives
+Use/create custom directives - $scope walled garden custom directives
 
 Consume Rest API, JSON using $resource service
+
+google maps
+
+***$resource service will initially create an empty [], so must use a callback such as $promise to retrieve data returned from $resource service.
 
 
 
