@@ -9,6 +9,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -23,10 +24,10 @@
     <!-- Add your site or application content here -->
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#/">Home</a></li>
-          <li><a ng-href="#/forecast">Forecast</a></li>
-          <li><a ng-href="#/">Contact</a></li>
+        <ul class="nav nav-pills pull-right" ng-controller="NavBarCtrl">
+          <li     ng-class="isActive('/') "><a ng-href="#/">Home</a></li>
+          <li><a   ng-class="isActive('/forecast')" ng-href="#/forecast">Forecast</a></li>
+          
         </ul>
         <h3 class="text-muted">Weather Forecast For Your City</h3>
       </div>
@@ -72,6 +73,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -82,6 +84,7 @@
        <script src="scripts/services/cityNameService.js"></script>
       <script src="scripts/services/weatherAPI.js"></script>
        <script src="scripts/controllers/homeCtrl.js"></script>
+      <script src="scripts/controllers/navbarCtrl.js"></script>
        <script src="scripts/controllers/forecastCtrl.js"></script>
       <script src="scripts/customdirectives/dailyreport.js"></script>
         <!-- endbuild -->
