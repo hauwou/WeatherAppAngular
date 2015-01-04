@@ -1,8 +1,0 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">{{
-      convertToDate({rawDate: weatherDay.dt})| date: dateFormat}}</h3>
-  </div>
-  <div class="panel-body"><span class="badge ">{{weatherDay.weather[0].description}}</span> High: {{convertToStandard({temp: weatherDay.temp.max})}} / Low: {{convertToStandard({temp: weatherDay.temp.min})}} 
-  </div>
-</div>
