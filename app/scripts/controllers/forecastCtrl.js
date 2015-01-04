@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('weatherApp')
   .controller('ForecastCtrl', ['$scope', '$routeParams','cityNameService','weatherAPIService', function ($scope, $routeParams, cityNameService, weatherAPIService) {
            

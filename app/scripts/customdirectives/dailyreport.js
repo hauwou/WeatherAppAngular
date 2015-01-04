@@ -14,12 +14,12 @@ angular.module('weatherApp')
       templateUrl: 'scripts/customdirectives/dailyreport.html',
       replace: true,
       scope: {
-        weatherDay: "=",
-        convertToStandard: "&",
-        convertToDate: "&",
-        dateFormat: "@"
+        weatherDay: '=',
+        convertToStandard: '&',
+        convertToDate: '&',
+        dateFormat: '@'
       }
 
-    }
+    };
 
   });

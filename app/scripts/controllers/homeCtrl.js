@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('weatherApp')
   .controller('HomeCtrl', ['$scope','$location','cityNameService', function ($scope, $location, cityNameService) {
     $scope.city = cityNameService.city;
@@ -8,6 +10,6 @@ angular.module('weatherApp')
 
 
       $scope.submit = function(){
-      $location.path("/forecast");
+      $location.path('/forecast');
       };
   }]);
