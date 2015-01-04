@@ -11,7 +11,7 @@ angular.module('weatherApp')
   .directive('dailyReport', function() {
     return {
       restrict: ' EA',
-      templateUrl: 'scripts/customdirectives/dailyreport.html',
+      templateUrl: 'https://github.com/hauwou/WeatherAppAngular/blob/master/dist/scripts/customdirectives/dailyreport.html',
       replace: true,
       scope: {
         weatherDay: '=',
